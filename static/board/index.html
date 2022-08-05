@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+  </head>
+  
+  <body>
+
+    <div class="timeContainer">
+      <p id="time">00:00</p>
+    </div>
+
+    <div class="scoresContainer">
+      <div class = "scoreContainer">
+        <div class = "teamNameContainer teamName" id = "homeTeam">
+          Kostanje II
+        </div>
+        <p class="score" id = "homeScore">02</p>
+      </div>
+      <div class = "foulsContainer">
+        <div class="periodContainer" id="periodNumber">I</div>
+        <p class = "foulText">FOULS</p>
+        <div class = foulContainer>
+          <p id = "homeFouls" class = "foulNumber">0</p>
+          <p id = "awayFouls" class = "foulNumber">0</p>
+        </div>
+      </div>
+
+      <div class = "scoreContainer">
+        <div class = "teamNameContainer teamName" id = "awayTeam">
+          Radovčići
+        </div>
+        <p class="score" id = "awayScore">10</p>
+      </div>
+    </div>
+
+    <div id="goalModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <p class = "goalModalText" id = "goalModalText">GOAL!!!</p>
+        <p class = "teamGoalModalText" id = "teamGoalModalText"></p>
+      </div>
+    
+    </div>
+
+    <div id="timeoutModal">
+
+      <!-- Modal content -->
+      <div class="timeout-modal-content">
+        <p class = "timeoutModalText" id = "timeoutModalText">TIMEOUT</p>
+        <p class = "timeoutTimeModalText" id = "timeoutTimeModalText">60</p>
+      </div>
+    
+    </div>
+    
+    <script type = "text/javascript" src="./lib/socket.io.js"></script>
+    <script type = "text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

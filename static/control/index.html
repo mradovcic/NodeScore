@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+  </head>
+  
+  <body>
+    <div class = "scoreBoardContainer">
+      <div class="timeContainer">
+        <p id="time">00:00</p>
+      </div>
+
+      <div class="scoresContainer">
+        <div class = "scoreContainer">
+          <p class = "teamName" id = "homeTeam">Kostanje II</p>
+          <p class="score" id = "homeScore">02</p>
+        </div>
+        <div class = "foulsContainer">
+          <p class = "foulText">FOULS</p>
+          <div class = foulContainer>
+            <p id = "homeFouls" class = "foulNumber">0</p>
+            <p id = "awayFouls" class = "foulNumber">0</p>
+          </div>
+        </div>
+        <div class = "scoreContainer">
+          <p class = "teamName" id = "awayTeam">Radovčići</p>
+          <p class="score" id = "awayScore">10</p>
+        </div>
+      </div>
+    </div>
+    <div class = "controlsMain">
+      <div class = "controls">
+      
+        <!--Home Team-->
+        <div class = "teamContainer">
+          <input type ="text" id = "homeTeamInput"/>
+          <div class = "buttonsContainer">
+            <button id = "homeTeamGoalsAdd"><p>+</p></button>
+            <p class = "whiteText">Golovi</p>
+            <button id = "homeTeamGoalsRemove"><p>-</p></button>
+          </div>
+
+          <div class = "buttonsContainer">
+            <button id = "homeTeamFoulsAdd"><p>+</p></button>
+            <p class = "whiteText">Prekršaji</p>
+            <button id = "homeTeamFoulsRemove"><p>-</p></button>
+          </div>
+        </div>
+        
+        <!--Time-->
+        <div class = "teamContainer">
+          <label for="periodInput" style="color: white; font-size: large; font-weight: bold;">Period:</label>
+          <input type ="text" id = "periodInput" placeholder="I", width="20px" style="text-align: center;"/>
+          <div class = "buttonsContainer" style="margin-top: 1%">
+            <p class="whiteText">Vrijeme</p>
+            <button id = "timerStart"><p>Start</p></button>
+            <button id = "timerPause"><p>Pauza</p></button>
+            <button id = "timerReset"><p>Reset</p></button>
+          </div>
+
+          <div class = "buttonsContainer">
+            <button id = "minutesAdd"><p>+</p></button>
+            <p class = "whiteText">Minute</p>            
+            <button id = "minutesRemove"><p>-</p></button>
+          </div>
+
+          <div class = "buttonsContainer">
+            <button id = "secondsAdd"><p>+</p></button>
+            <p class = "whiteText">Sekunde</p>            
+            <button id = "secondsRemove"><p>-</p></button>
+          </div>
+          
+          <button id = "timeout"><p>Start Timeout</p></button>
+        </div>
+
+        <!--Away Team-->
+        <div class = "teamContainer">
+          <input type ="text" id = "awayTeamInput"/>
+          <div class = "buttonsContainer">
+            <button id = "awayTeamGoalsAdd"><p>+</p></button>
+            <p class = "whiteText">Golovi</p>            
+            <button id = "awayTeamGoalsRemove"><p>-</p></button>
+          </div>
+
+          <div class = "buttonsContainer">
+            <button id = "awayTeamFoulsAdd"><p>+</p></button>
+            <p class = "whiteText">Prekršaji</p>
+            <button id = "awayTeamFoulsRemove"><p>-</p></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type = "text/javascript" src="./lib/socket.io.js"></script>
+    <script type = "text/javascript" src="./js/index.js"></script>
+    <script type = "text/javascript" src="./js/controls.js"></script>
+  </body>
+</html>
