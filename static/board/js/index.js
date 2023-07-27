@@ -1,4 +1,5 @@
 const game = io.connect(document.location.host)
+let playingSound = false
 
 game.on('connect', () => {
 })
@@ -74,9 +75,11 @@ game.on('clock', (msg) => {
   const minutes = Math.floor(clock / 1000 / 60)
   const seconds = Math.floor(clock / 1000 % 60)
 
-  if (minutes == 0 && seconds == 0) {
+  if (minutes == 0 && seconds == 0 && !playingSound) {
+    playingSound = true
     const horn = new Audio('../assets/buzz.wav')
     horn.play()
+    setTimeout(() => playingSound = false, 2000)
   }
 
   let time = ''

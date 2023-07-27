@@ -25,7 +25,7 @@ export default class Game {
   startTimer = () => {
     if (!this.timerRunning) {
       this.offset = Date.now()
-      this.interval = setInterval(this.update, 1000)
+      this.interval = setInterval(this.update, 200)
       this.timerRunning = true
     }
   }
@@ -57,7 +57,7 @@ export default class Game {
   startTimeoutTimer = () => {
     if (!this.inTimeout) {
       this.offset = Date.now()
-      this.timeoutInterval = setInterval(this.timeoutUpdate, 1000)
+      this.timeoutInterval = setInterval(this.timeoutUpdate, 200)
       this.inTimeout = true
     }
   }
